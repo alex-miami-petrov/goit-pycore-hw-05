@@ -7,7 +7,7 @@ def generator_numbers(text: str):
     for match in re.finditer(pattern, text):
         yield float(match.group(1))
 
-def sum_profit(text: str, func: Callable):
+def sum_profit(text: str, func: Callable) -> float:
     total = 0
 
     for number in func(text):
